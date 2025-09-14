@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Tulasi's Portfolio</title>
+    <link rel="stylesheet" href="home.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="https://mobile.technicalhub.io:5010/student/23A91A05C5.png">
+
+     <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
+
+</head>
+<body>
+
+    <!-- nav  -->
+
+    <div class="nav-bar">
+        <div class="name">
+            <i>Krishna Tulasi Satti</i>
+        </div>
+
+        <div class="nav-links">
+            <a href="./index.html" style="color: #e7721e;">Home</a>
+            <a href="./index.html#about_me">About</a>
+            <a href="./education.html">Education</a>
+            <a href="./projects.html">Projects</a>
+
+            <!-- <a href="">Experience</a> -->
+            <a href="./cert.html">Certifications</a>
+            <a href="./Assets/Tulasi_Resume.pdf">Resume</a>
+            <a href="./contact.html"><button class="contact-button">Contact</button></a>
+        </div>
+
+        <div class="menu-icon" onclick="openSidebar()">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
+
+        <div class="menu-bar">
+            <span class="close-icon" onclick="closeSidebar()">&#10005;</span> 
+            
+            <a href="./index.html" style="color: #e7721e;">Home</a>
+            <a href="./index.html#about_me">About</a>
+            <a href="./education.html">Education</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./cert.html">Certifications</a>
+            <a href="./Assets/Tulasi_Resume.pdf">Resume</a>
+            <a href="./contact.html"><button class="contact-button">Contact</button></a>
+        </div>
+
+
+    </div>
+
+    <!-- body  -->
+
+    <main>
+         <!-- <img src="./Assets/frontend.json" alt=""> -->
+        <div class="image" data-aos = "fade-right" data-aos-duration="2500">
+            <img src="https://mobile.technicalhub.io:5010/student/23A91A05C5.png" alt="">
+        </div>
+
+        <div class="about">
+            <p data-aos="fade-down">Hello !</p>
+            <p data-aos = "fade-up" data-aos-delay="300">This is <span class="my_name">Krishna Tulasi Satti</span></p>
+            <p data-aos = "fade-up" data-aos-delay="600">I am a <span class="info"></span></p>
+
+            <div class="about_para">
+                <p>I'm a Full Stack Developer with a strong knowledge in HTML, CSS, JavaScript and BootStrap. I have a good knowledge in C, C++, Java and Python. I'm a highly motivated and dedicated student with a passion for Competitive Coding.I'm interested in contributing to innovative projects. </p>
+            </div>
+
+            <div class="lets_connect">
+                <button class="connect">
+                    Let's Connect :)
+                </button>
+
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/krishna-tulasi-satti-649024283/" target="_blank">
+                        <i class="fab fa-linkedin icon" data-aos="fade-up" data-aos-delay="200"></i>
+                    </a>
+                    <a href="https://github.com/KrishnaTulasiSatti" target="_blank">
+                        <i class="fab fa-github icon" data-aos="fade-up" data-aos-delay="400"></i>
+                    </a>
+                    <a href="mailto:23A91A05C5@aec.edu.in">
+                        <i class="fas fa-envelope icon" data-aos="fade-up" data-aos-delay="600"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_krishna_tulasi" target="_blank">
+                        <i class="fab fa-instagram icon" data-aos="fade-up" data-aos-delay="800"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+       
+    </main>
+
+    <div class="myskills" id="about_me">
+        <h1>My Skills</h1>
+        
+    </div>
+
+    <div class="achievements">
+        <h1></h1>
+    </div>
+
+    <footer>
+        <div class="footer-div">
+            <div> &#169; Copyright 2025 </div>
+            <div style="padding-bottom: 5px;">Krishna Tulasi❤️</div> 
+            <div>All Rights Reserved.</div>
+        </div>
+    </footer>
+    
+    <script src="home.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1400,     // animation duration in ms
+            delay: 0,           // delay before animation starts
+            once: true,         // animate only once (recommended for onload)
+            offset: 0           // start animation as soon as element is in viewport
+        });
+    </script>
+</body>
+</html>

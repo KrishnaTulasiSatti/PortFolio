@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Tulasi's Portfolio</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="contact.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="https://mobile.technicalhub.io:5010/student/23A91A05C5.png">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="name">
+            <i>Krishna Tulasi Satti</i>
+        </div>
+
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./index.html#about_me">About</a>
+            <a href="./education.html">Education</a>
+            <a href="./projects.html">Projects</a>
+            
+            <a href="./cert.html">Certifications</a>
+            <a href="./Assets/Tulasi_Resume.pdf">Resume</a>
+            <a href="./contact.html"><button class="contact-button">Contact</button></a>
+        </div>
+
+        <div class="menu-icon" onclick="openSidebar()">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
+
+         <div class="menu-bar">
+            <span class="close-icon" onclick="closeSidebar()">&#10005;</span> 
+            
+            <a href="./index.html" style="color: #e7721e;">Home</a>
+            <a href="./index.html#about_me">About</a>
+            <a href="./education.html">Education</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./cert.html">Certifications</a>
+            <a href="./Assets/Tulasi_Resume.pdf">Resume</a>
+            <a href="./contact.html"><button class="contact-button">Contact</button></a>
+        </div>
+    </div>
+
+    <div class="contact-div">
+        <button>Contact Me</button>
+
+        <div class="contact-para">
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you have a question, a proposal, or just want to say hello, feel free to reach out. I'll get back to you as soon as possible!
+        </div>
+
+        <div class="main-content">
+            <div class="gif-container">
+                <div class="gif" data-aos="fade-right"></div>
+                <p>Let’s bring ideas to life — reach out and let’s create something impactful together.</p>
+
+                <div class="contact_icons">
+                    <a href="https://www.linkedin.com/in/krishna-tulasi-satti-649024283/" target="_blank">
+                        <i class="fab fa-linkedin icon" data-aos="fade-right" data-aos-delay="400"></i>
+                    </a>
+                    <a href="https://github.com/KrishnaTulasiSatti" target="_blank">
+                        <i class="fab fa-github icon" data-aos="fade-right" data-aos-delay="800"></i>
+                    </a>
+                    <a href="mailto:23A91A05C5@aec.edu.in">
+                        <i class="fas fa-envelope icon" data-aos="fade-right" data-aos-delay="1200"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_krishna_tulasi" target="_blank">
+                        <i class="fab fa-instagram icon" data-aos="fade-right" data-aos-delay="1600"></i>
+                    </a>
+                    <a href="tel:+918790369062">
+                        <i class="fas fa-phone icon" style="font-size: 24px;" data-aos="fade-right" data-aos-delay="2000"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="form-container">
+                <p>Let's Work Together :)</p>
+                <div class="fields">
+                    <label for="" data-aos="fade-up">Your Name</label>
+                    <input type="text" placeholder="Enter your name" data-aos="fade-right" data-aos-delay="300" data-aos-duration="2000">
+
+                    <label for="" data-aos="fade-up">Your Email</label>
+                    <input type="email" placeholder="Enter your email" data-aos="fade-right" data-aos-delay="300" data-aos-duration="2000">
+
+                    <label for="" data-aos="fade-up">Your Message</label>
+                    <textarea rows="10" placeholder="Type your Message here" data-aos="fade-right" data-aos-delay="300" data-aos-duration="2000"></textarea>
+
+                    <button style="margin-top : 20px" data-aos="fade-up" data-aos-duration="2400">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+            <div class="footer-div">
+                <div> &#169; Copyright 2025 </div>
+                <div style="padding-bottom: 5px;">Krishna Tulasi❤️</div> 
+                <div>All Rights Reserved.</div>
+            </div>
+    </footer>
+
+
+    <script src="./contact.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+  AOS.init({
+    duration: 1400,     // animation duration in ms
+    delay: 0,           // delay before animation starts
+    once: true,         // animate only once (recommended for onload)
+    offset: 0           // start animation as soon as element is in viewport
+  });
+  </script>
+</body>
+</html>
