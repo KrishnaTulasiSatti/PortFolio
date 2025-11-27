@@ -42,7 +42,7 @@ var objects = [
     "image4" : "https://www.codechef.com/favicon.ico",
     "point1" : "Achieved a maximum rating of <span>1667</span> on LeetCode, ranking in the top 19.68% percentile for problem-solving ability across various topics.",
     "point2" : "Maintained a maximum rating of <span>1742 </span>(3-Star) in GFG, demonstrating proficiency in algorithms and data structures.",
-    "point3" : "Reached a maximum rating of <span>1491 </span>(2-Star) in Codechef, achieving strong performance in competitive programming challenges.",
+    "point3" : "Reached a maximum rating of <span>1494 </span>(2-Star) in Codechef, achieving strong performance in competitive programming challenges.",
     "point4" : "Achieved a <span>4-star</span> rating in HackerRank in problem-solving."
   },
 
@@ -167,9 +167,83 @@ function closeSidebar() {
     }, 300); // Match this to your CSS transition duration
 }
 
+var a = 0;
+
+var achievements = [
+  {
+    "icon" : "./Assets/thub.png",
+    "link" : "",
+    "heading" : "Winner of Quiz in Winter War Event",
+    "matter" : "Won the quiz competition by demonstrating strong general knowledge and quick thinking.",
+    "date" : "December 2023, Technical Hub"
+  },
+  {
+    "icon" : "./Assets/thub.png",
+    "link" : "",
+    "heading" : "Winner of Code Complete in Winter War Event",
+    "matter" : "Won the coding competition held in Winter War event",
+    "date" : "December 2023, Technical Hub"
+  },
+  {
+    "icon" : "./Assets/thub.png",
+    "link" : "",
+    "heading" : "Winner of Bi-weekly Coding Contest 6",
+    "matter" : "Excelled in solving coding problems through efficient problem-solving.",
+    "date" : "January 2024, Technical Hub"
+  },
+  {
+    "icon" : "./Assets/trainee_of_month.png",
+    "link" : "",
+    "heading" : "Trainee Of the Month (Bamboo Coders)",
+    "matter" : "Awarded 'Trainee of the Month' for exceptional performance and commitment",
+    "date" : "October 2024, Technical Hub"
+  },
+  {
+    "icon" : "./Assets/thub.png",
+    "link" : "",
+    "heading" : "Winner of Bash Battle",
+    "matter" : "Achieved top position in Bash Battle through efficient and accurate command-line problem-solving.",
+    "date" : "January 2025, Technical Hub"
+  },
+  {
+    "icon" : "./Assets/thub.png",
+    "link" : "",
+    "heading" : "Winner of SQL Detectives Challenge",
+    "matter" : "Achieved top position for demonstrating strong database querying.",
+    "date" : "January 2025, Technical Hub"
+  }
 
 
+]
 
+var a = 0;
+
+achievements.map((ele) => {
+  var card = `
+     
+            <div class="achieve_card">
+                <div class="achieve_icon-div">
+                    <div class="achieve_icon">
+                         <a href=${ele.link}><img src=${ele.icon} alt="" style="border-radius: 50%; height: 100px; width: 100px; "></a>
+                    </div>
+                </div>
+                <div class="achieve_matter">
+                    <p style="font-size: 22px; margin-bottom: 20px; padding:0px 10px;">${ele.heading}</p>
+                    <p style="color: #d1d1d1; margin: 0px 20px;">${ele.matter}</p>
+                    <p style="margin-top : 10px">${ele.date}</p>
+                </div>
+            </div>
+        
+  `
+
+
+  var ind = Math.floor(a/3);
+  const parent = document.getElementsByClassName("achieve_cards")[ind];
+  parent.innerHTML += card;
+  
+  a = a + 1;
+  
+})
 
 
   lottie.loadAnimation({
@@ -197,3 +271,14 @@ function closeSidebar() {
   });
 
 
+const nextscrollFun = () => {
+  const parent = document.getElementsByClassName("cards")[0];
+  parent.scrollLeft += 920;
+}
+
+const prevscrollFun = () => {
+  const parent = document.getElementsByClassName("cards")[0];
+  if(parent.scrollLeft > 0) {
+    parent.scrollLeft -= 920;
+  }
+}

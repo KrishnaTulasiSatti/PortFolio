@@ -76,6 +76,7 @@
   margin: auto;
   position: relative;
   border-radius: 12px;
+
 }
 
 .slider-track { 
@@ -90,9 +91,10 @@
   box-sizing: border-box;
   padding: 20px;
   border: 1px solid #ddd;
-  border-radius: 12px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
+  background-color: #1d1d25;
 }
 
 .slider-card img {

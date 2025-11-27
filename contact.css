@@ -38,6 +38,8 @@
     height: auto;
     line-height: 36px;
     padding: 30px 24px;
+    background-color: #1d1d25;
+    border-radius: 24px;
 }
 
 .gif-container {
@@ -66,6 +68,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 }
 
 .fields label {
@@ -81,6 +84,7 @@ input {
     font-size: 18px;
     color: #d1d1d1;
     padding: 0px 10px;
+    background-color: #292930;
 }
 
 input:focus,textarea:focus {
@@ -99,6 +103,7 @@ textarea {
     color: #d1d1d1;
     padding: 10px 10px;
     padding-top: 15px;
+    background-color: #292930;
 }
 
 .contact_icons {

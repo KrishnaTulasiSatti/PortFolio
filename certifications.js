@@ -118,21 +118,17 @@ const certify = (name,cat) => {
       "CertiImage" : "./Assets/js_2_Badge.png",
       "CertiCompany" : "Cisco",
       "CertiName" : "JavaScript Essentials 2",
-      "CertiLink" : "./Assets/FSD_Internship.pdf",
+      "CertiLink" : "#",
       "category"  : "badges"
     },
     {
       "CertiImage" : "./Assets/html_essentials.png",
       "CertiCompany" : "Cisco",
       "CertiName" : "HTML Essentials",
-      "CertiLink" : "./Assets/FSD_Internship.pdf",
+      "CertiLink" : "#",
       "category"  : "badges"
     }
-
-    
 ];
-
-var tulasi = 0;
 
 certificates.map((cert,index) =>  {
   if(cert.category === cat) {
@@ -140,7 +136,7 @@ certificates.map((cert,index) =>  {
     var certificate = `
                 <div class="pdf" data-aos="fade-up" >
                 <div class="certi_image">
-                    <img src=${cert.CertiImage} alt="" class="image_icon">
+                    <img src=${cert.CertiImage} alt="">
                     <div class="view_cert">
                         <button class="view"><a href=${cert.CertiLink} target = "_blank" >View Certificate</a></button>
                     </div>
@@ -149,25 +145,15 @@ certificates.map((cert,index) =>  {
                     <div class="certi_c"><div class="certi_com">${cert.CertiCompany}</div></div>
                     <div class="name_date">
                          <div class="certi_name"><h3>${cert.CertiName}</h3></div>
+                         
                     </div>
                 </div>
             </div>
   `
-
-      
       var parent = document.getElementsByClassName(name)[0];
       parent.innerHTML += certificate
-
-      if(cert.category === 'badges') {
-        const p = document.getElementsByClassName("pdf")[tulasi];
-        p.style = "width:280px"
-        const image = document.getElementsByClassName("image_icon")[tulasi];
-        image.style = "width:280px"
-        document.getElementsByClassName("view")[tulasi].innerText = "View Badge"
-        tulasi = tulasi + 1
-      }
   }
- 
+  
 });
 }
 certify("default3","global");

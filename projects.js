@@ -32,7 +32,7 @@ var objects = [
        "projectTitle" : "HEALTH HUB",
        "projectDesc" : "Developed a responsive healthcare web application with a symptom checker, condition-based diet recommendations, hospital listings",
        "techStack" : "HTML, CSS",
-       "github_link" : "https://krishnatulasisatti.github.io/HealthHub/"
+       "github_link" : "https://github.com/KrishnaTulasiSatti/HealthHub"
     },
     {
        "projectImage" : "./Assets/healthhub.png",
@@ -40,7 +40,7 @@ var objects = [
        "projectTitle" : "HEALTH HUB",
        "projectDesc" : "Developed a responsive healthcare web application with a symptom checker, condition-based diet recommendations, hospital listings",
        "techStack" : "HTML, CSS",
-       "github_link" : "https://krishnatulasisatti.github.io/HealthHub/"
+       "github_link" : "https://github.com/KrishnaTulasiSatti/HealthHub"
     },
     {
        "projectImage" : "./Assets/healthhub.png",
@@ -48,7 +48,7 @@ var objects = [
        "projectTitle" : "HEALTH HUB",
        "projectDesc" : "Developed a responsive healthcare web application with a symptom checker, condition-based diet recommendations, hospital listings",
        "techStack" : "HTML, CSS",
-       "github_link" : "https://krishnatulasisatti.github.io/HealthHub/"
+       "github_link" : "https://github.com/KrishnaTulasiSatti/HealthHub"
     }
 
 ]
