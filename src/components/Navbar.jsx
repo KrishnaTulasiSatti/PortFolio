@@ -14,11 +14,16 @@ const Navbar = () => {
         setIsSidebarOpen(false);
     };
 
+    const handleNavLinkClick = (path) => {
+        if (location.pathname === path) {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+        }
+        closeSidebar();
+    };
+
     const navLinks = [
         { name: 'Home', path: '/' },
-        { name: 'Projects', path: '/projects' },
-        { name: 'Experience', path: '/experience' },
-        { name: 'Certifications', path: '/certifications' },
+        { name: 'Experience', path: '/#experience' },
     ];
 
     const isActive = (path) => {
@@ -43,36 +48,30 @@ const Navbar = () => {
                     ) : link.path.startsWith('/#') ? (
                         <a key={link.name} href={link.path} style={isActive(link.path) ? { color: '#e7721e' } : {}}>{link.name}</a>
                     ) : (
-                        <Link key={link.name} to={link.path} style={isActive(link.path) ? { color: '#e7721e' } : {}}>
+                        <Link key={link.name} to={link.path} style={isActive(link.path) ? { color: '#e7721e' } : {}} onClick={() => handleNavLinkClick(link.path)}>
                             {link.name}
                         </Link>
                     )
                 ))}
                 <a href="https://drive.google.com/file/d/1ULL08m1OttJiSJmwV9DPx3X3xgV8its_/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
-                <Link to="/contact">
-                    <button className="contact-button">Contact</button>
-                </Link>
-            </div>
+                </div>
 
             <div className="menu-icon" onClick={openSidebar}>
                 <i className="fas fa-bars fa-2x"></i>
             </div>
 
             <div className={`menu-bar ${isSidebarOpen ? 'active' : ''}`}>
-                <span className="close-icon" onClick={closeSidebar}>&#10005;</span> 
-                
+                <span className="close-icon" onClick={closeSidebar}>&#10005;</span>
+
                 {navLinks.map((link) => (
                     link.path.startsWith('http') ? (
                         <a key={link.name} href={link.path} target="_blank" rel="noopener noreferrer" onClick={closeSidebar}>{link.name}</a>
                     ) : (
-                        <Link key={link.name} to={link.path} style={isActive(link.path) ? { color: '#e7721e' } : {}} onClick={closeSidebar}>
+                        <Link key={link.name} to={link.path} style={isActive(link.path) ? { color: '#e7721e' } : {}} onClick={() => handleNavLinkClick(link.path)}>
                             {link.name}
                         </Link>
                     )
                 ))}
-                <Link to="/contact" onClick={closeSidebar}>
-                    <button className="contact-button">Contact</button>
-                </Link>
             </div>
         </div>
     );

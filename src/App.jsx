@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Experience from './pages/Experience';
@@ -12,8 +13,10 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-container">
-        <Navbar />
+        {/* <Navbar /> */}
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
@@ -23,7 +26,7 @@ function App() {
           {/* Add a fallback for legacy cert.html and other paths if needed */}
           <Route path="/cert.html" element={<Certifications />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
         <Analytics />
       </div>
     </Router>

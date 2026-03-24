@@ -54,7 +54,7 @@ const Contact = () => {
             <div className="contact-container">
                 <div className="contact-header" data-aos="fade-down">
                     <h1>Contact Me</h1>
-                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you have a question, a proposal, or just want to say hello, feel free to reach out.</p>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you have a question or a proposal, feel free to reach out.</p>
                 </div>
 
                 <div className="contact-main">

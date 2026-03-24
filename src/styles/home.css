@@ -3,16 +3,24 @@
     padding: 0;
     color: white;
     font-family: "Josefin Sans", sans-serif;
-    box-sizing: border-box; /* Fundamental for responsiveness */
+    box-sizing: border-box;
+    /* Fundamental for responsiveness */
 }
 
-html, body {
+html,
+body {
     scroll-behavior: smooth;
     max-width: 100vw;
     width: 100%;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+}
+
+@media (max-width: 850px) {
+    .side-brand {
+        display: none !important;
+    }
 }
 
 
@@ -126,11 +134,22 @@ main {
     max-width: 500px;
     height: auto;
     font-size: 24px;
-    line-height: 46px;
+    line-height: 1.6;
+    /* Changed from 46px to relative 1.6 */
     margin-right: 30px;
     padding-top: 50px;
     margin-left: 30px;
 }
+
+.about_para {
+    font-size: 16px;
+    line-height: 1.8;
+    /* Increased line-spacing */
+    color: #bbb;
+    margin-top: 20px;
+    letter-spacing: 0.3px;
+}
+
 
 
 .image {
@@ -426,7 +445,8 @@ main {
 
 .achieve_cards {
     width: 100%;
-    min-width: 100%; /* Important for slider: each chunk is a slide */
+    min-width: 100%;
+    /* Important for slider: each chunk is a slide */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
@@ -441,15 +461,18 @@ main {
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 10px;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .cards::-webkit-scrollbar {
     display: none;
 }
 
-.prev-button, .next-button {
+.prev-button,
+.next-button {
     width: 45px;
     height: 45px;
     background-color: #e7721e;
@@ -463,12 +486,14 @@ main {
     flex-shrink: 0;
 }
 
-.prev-button:hover, .next-button:hover {
+.prev-button:hover,
+.next-button:hover {
     transform: scale(1.1);
     background-color: #fff;
 }
 
-.prev-button:hover i, .next-button:hover i {
+.prev-button:hover i,
+.next-button:hover i {
     color: #e7721e;
 }
 
@@ -476,6 +501,7 @@ main {
     .cards {
         max-width: 700px;
     }
+
     .achieve_cards {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -483,12 +509,16 @@ main {
 
 @media (max-width : 700px) {
     .cards {
-        max-width: 380px; /* Increased to fit better on screens like 425px */
+        max-width: 380px;
+        /* Increased to fit better on screens like 425px */
     }
+
     .achieve_cards {
         grid-template-columns: 1fr;
     }
-    .prev-button, .next-button {
+
+    .prev-button,
+    .next-button {
         width: 35px;
         height: 35px;
     }
@@ -548,44 +578,59 @@ main {
 
 @media (max-width : 420px) {
     .achieve_matter {
-        padding: 5px 35px; /* Added side padding so text doesn't go under absolute buttons */
-        gap: 5px; /* Reduced gap between elements */
+        padding: 5px 35px;
+        /* Added side padding so text doesn't go under absolute buttons */
+        gap: 5px;
+        /* Reduced gap between elements */
     }
+
     .cards-wrap {
         position: relative;
         width: 100%;
         gap: 0;
     }
-    .prev-button, .next-button {
+
+    .prev-button,
+    .next-button {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         width: 32px;
         height: 32px;
         z-index: 10;
-        background-color: rgba(231, 114, 30, 0.9); /* More prominent for overlay */
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        background-color: rgba(231, 114, 30, 0.9);
+        /* More prominent for overlay */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
+
     .prev-button {
         left: 5px;
     }
+
     .next-button {
         right: 5px;
     }
+
     .cards {
-        max-width: 100%; /* Take up the entire width */
+        max-width: 100%;
+        /* Take up the entire width */
         padding: 10px 0;
     }
+
     .achieve_title {
         font-size: 18px;
-        margin-bottom: 5px; /* Reduced gap */
+        margin-bottom: 5px;
+        /* Reduced gap */
     }
+
     .achieve_description {
         font-size: 13.5px;
     }
+
     .achieve_date {
         font-size: 13px;
-        margin-top: 5px; /* Reduced gap */
+        margin-top: 5px;
+        /* Reduced gap */
     }
 }
 
@@ -596,7 +641,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px; /* Reduced gap for smaller screens */
+    gap: 15px;
+    /* Reduced gap for smaller screens */
     width: 100%;
     max-width: 1200px;
 }
@@ -604,16 +650,21 @@ main {
 
 
 .achieve_card {
-    width: 100%; /* Take full grid column width */
-    max-width: 400px; /* Limit size on large grids */
-    min-height: 420px; /* Allow growing if text is long */
+    width: 100%;
+    /* Take full grid column width */
+    max-width: 400px;
+    /* Limit size on large grids */
+    min-height: 420px;
+    /* Allow growing if text is long */
     height: auto;
     border: 1px solid white;
     border-radius: 20px;
     background-color: #1d1d25;
     transition: transform 0.7s;
-    margin: 0 auto; /* Center in grid slot */
-    padding-bottom: 25px; /* Extra breathing room */
+    margin: 0 auto;
+    /* Center in grid slot */
+    padding-bottom: 25px;
+    /* Extra breathing room */
 }
 
 
@@ -1183,11 +1234,23 @@ main {
     }
 
     .about {
-        width: 95%;
-        padding-left: 30px;
-        margin-right: 10px;
+        width: 100%;
+        padding-left: 0px;
+        margin-left: 15px;
+        margin-right: 0px;
+        padding-top: 20px;
+    }
+
+    .about p:nth-child(2) {
+        font-size: 18px !important;
+        line-height: 1.4;
+    }
+
+    .my_name {
+        white-space: nowrap;
     }
 }
+
 
 @media (max-width : 690px) {
     .certi_para {
@@ -1231,7 +1294,7 @@ main {
 @media (max-width : 500px) {
     .about {
         width: 100%;
-        /* margin-left: 20px; */
+        padding-left: 0px;
     }
 
     .lets_connect {
@@ -1817,7 +1880,7 @@ main {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
         gap: 15px !important;
     }
-    
+
     .cp-skill .stat-card {
         padding: 25px 20px;
     }
@@ -1895,4 +1958,59 @@ main {
 .plat-codingninjas .stat-val,
 .plat-codingninjas .rank-val {
     color: #f66c3b;
+}
+
+.view-all-btn {
+    padding: 12px 24px;
+    background-color: #e7721e;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.view-all-btn:hover {
+    background-color: transparent;
+    border-color: #e7721e;
+    color: #e7721e;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(231, 114, 30, 0.3);
+}
+
+.home-section h1 {
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* Global Mobile Fixes */
+@media (max-width: 768px) {
+    .name {
+        font-size: 16px !important;
+        margin-left: 10px !important;
+        white-space: nowrap !important;
+    }
+
+    .section-header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin-bottom: 30px !important;
+        gap: 15px !important;
+    }
+
+    .section-header h1 {
+        font-size: 26px !important;
+        text-align: center !important;
+        margin: 0 !important;
+    }
+
+    .view-all-btn {
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+    }
 }

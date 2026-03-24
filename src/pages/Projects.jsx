@@ -4,6 +4,8 @@ import 'aos/dist/aos.css';
 import '../styles/home.css';
 import '../styles/projects.css';
 
+import { projects } from '../data/portfolioData';
+
 const Projects = () => {
 
     useEffect(() => {
@@ -14,27 +16,6 @@ const Projects = () => {
             offset: 0
         });
     }, []);
-
-    const projects = [
-        {
-            "projectImage": "/Assets/healthhub.png",
-            "website": "https://healthhub-ai.vercel.app/",
-            "projectTitle": "Health Hub",
-            "role": "Frontend & Backend Developer",
-            "projectDesc": "A full-stack MERN healthcare platform integrating LLMs for an AI-powered symptom checker and condition-based diet planning. Includes secure JWT authentication, a premium diagnostic UI, and dynamic hospital listings.",
-            "techStack": "MongoDB, Express, React, React Router, Node.js, AI/LLMs, Mongoose, JWT",
-            "github_link": "https://github.com/KrishnaTulasiSatti/HealthHub"
-        },
-        {
-            "projectImage": "/Assets/healthhub.png",
-            "website": "https://healthhub-ai.vercel.app/",
-            "projectTitle": "Health Hub",
-            "role": "Frontend & Backend Developer",
-            "projectDesc": "A full-stack MERN healthcare platform integrating LLMs for an AI-powered symptom checker and condition-based diet planning. Includes secure JWT authentication, a premium diagnostic UI, and dynamic hospital listings.",
-            "techStack": "MongoDB, Express, React, React Router, Node.js, AI/LLMs, Mongoose, JWT",
-            "github_link": "https://github.com/KrishnaTulasiSatti/HealthHub"
-        }
-    ];
 
     return (
         <div style={{ backgroundColor: '#1d1d25', minHeight: '100vh', padding: '80px 20px 20px 20px', fontFamily: '"Josefin Sans", sans-serif' }}>

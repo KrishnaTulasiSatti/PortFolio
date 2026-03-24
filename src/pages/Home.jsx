@@ -1,8 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Lottie from 'lottie-react';
 import '../styles/home.css';
+import '../styles/projects.css';
+import '../styles/certifications.css';
+import { projects, certificates } from '../data/portfolioData';
 
 // Importing JSON animation data directly for performance and stability
 import skillAnim1 from '../../public/Assets/RPeXbewMU8.json';
@@ -43,6 +47,7 @@ const Home = () => {
     const [charIndex, setCharIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const cardsRef = useRef(null);
+    const timelineRef = useRef(null);
 
     // Typing effect
     useEffect(() => {
@@ -189,6 +194,14 @@ const Home = () => {
         }
     ];
 
+    const experiences = [
+        { title: "1st Sem", subtitle: "Ignite Coder", items: ["C", "Problem Solving"] },
+        { title: "2nd Sem", subtitle: "Ignite Coder", items: ["Data Structures & Algorithms", "Won Bi-Weekly Contest-6", "C++"] },
+        { title: "3rd Sem", subtitle: "Bamboo Coder", items: ["Java", "Python", "ADSA", "HTML", "CSS", "JavaScript"] },
+        { title: "4th Sem", subtitle: "Become Coder", items: ["OS", "DBMS", "Owl Coder 4.0", "Competitive Programming"] },
+        { title: "5th & 6th Sem", subtitle: "Drive Ready 7.0", items: ["React", "Node", "Express", "MongoDB", "React Native", "Owl Coder 5.0"] }
+    ];
+
     // Achievement slider logic
     const nextscrollFun = () => {
         if (cardsRef.current) {
@@ -199,6 +212,18 @@ const Home = () => {
     const prevscrollFun = () => {
         if (cardsRef.current) {
             cardsRef.current.scrollLeft -= cardsRef.current.offsetWidth;
+        }
+    };
+
+    const nextTimeline = () => {
+        if (timelineRef.current) {
+            timelineRef.current.scrollLeft += 450;
+        }
+    };
+
+    const prevTimeline = () => {
+        if (timelineRef.current) {
+            timelineRef.current.scrollLeft -= 450;
         }
     };
 
@@ -227,10 +252,13 @@ const Home = () => {
     }
 
     return (
-        <div style={{ backgroundColor: '#292930' }}>
+        <div style={{ backgroundColor: '#292930', position: 'relative' }}>
             <main>
-                <div className="image" data-aos="fade-right" data-aos-duration="2500">
+                <div className="image" data-aos="fade-right" data-aos-duration="2500" style={{ display: 'flex', flexDirection: 'column', gap: '40px', alignItems: 'center' }}>
                     <img src="https://mobile.technicalhub.io:5010/student/23A91A05C5.png" alt="MyImage" />
+                    <div className="name" style={{ fontSize: '24px', letterSpacing: '2px', textTransform: 'uppercase', fontStyle: 'normal', margin: 0, height: 'auto' }}>
+                        Krishna Tulasi<span>Satti</span>
+                    </div>
                 </div>
 
                 <div className="about">
@@ -246,30 +274,15 @@ const Home = () => {
 
 
 
-                    <div className="lets_connect">
-                        <button className="connect">
-                            Let's Connect :)
-                        </button>
-
-                        <div className="icons">
-                            <a href="https://www.linkedin.com/in/krishna-tulasi-satti-649024283/" target="_blank" rel="noreferrer">
-                                <i className="fab fa-linkedin icon" data-aos="fade-up" data-aos-delay="200"></i>
-                            </a>
-                            <a href="https://github.com/KrishnaTulasiSatti" target="_blank" rel="noreferrer">
-                                <i className="fab fa-github icon" data-aos="fade-up" data-aos-delay="400"></i>
-                            </a>
-                            <a href="mailto:23A91A05C5@aec.edu.in">
-                                <i className="fas fa-envelope icon" data-aos="fade-up" data-aos-delay="600"></i>
-                            </a>
-                            <a href="https://www.instagram.com/_krishna_tulasi" target="_blank" rel="noreferrer">
-                                <i className="fab fa-instagram icon" data-aos="fade-up" data-aos-delay="800"></i>
-                            </a>
-                        </div>
+                    <div className="resume_only" style={{ marginTop: '40px' }}>
+                        <a href="https://drive.google.com/file/d/1ULL08m1OttJiSJmwV9DPx3X3xgV8its_/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="view-all-btn" style={{ textDecoration: 'none', display: 'inline-block', fontSize: '18px' }}>
+                            View Resume
+                        </a>
                     </div>
                 </div>
             </main>
 
-            <div className="myskills" id="about_me">
+            <div className="myskills" id="about_me" style={{ backgroundColor: '#1d1d25', padding: '100px 0' }}>
                 {skillObjects.map((ele, index) => (
                     <div
                         key={index}
@@ -280,7 +293,7 @@ const Home = () => {
                             <>
                                 <div className="skill-info">
                                     {ele.SkillName && <p style={{ color: '#e7721e' }}>{ele.SkillName}</p>}
-                                    <h2>{ele.SkillHeading}</h2>
+                                    <h2 style={{ textAlign: 'center' }}>{ele.SkillHeading}</h2>
                                     <div className="images">
                                         {ele.image1 && (
                                             <>
@@ -350,7 +363,7 @@ const Home = () => {
                                 <LottiePlayer animationPath={ele.animationPath} />
                                 <div className="skill-info">
                                     {ele.SkillName && <p style={{ color: '#e7721e' }}>{ele.SkillName}</p>}
-                                    <h2>{ele.SkillHeading}</h2>
+                                    <h2 style={{ textAlign: 'center' }}>{ele.SkillHeading}</h2>
                                     <div className="images">
                                         <a href="" data-aos="fade-left" data-aos-delay="200"><img src={ele.image1} alt="Icon" width="28" /></a>
                                         <a href="" data-aos="fade-left" data-aos-delay="400"><img src={ele.image2} alt="Icon" width="29" /></a>
@@ -372,8 +385,76 @@ const Home = () => {
                 ))}
             </div>
 
-            <div className="achievements">
-                <h1>Achievements</h1>
+
+
+            {/* Projects Overview */}
+            <div className="home-section" style={{ backgroundColor: '#292930', padding: '100px 20px' }}>
+                <div className="new-projects-container">
+                    <div className="section-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '50px' }}>
+                        <h1 style={{ margin: 0, fontSize: '36px', textAlign: 'left' }}>Featured Projects</h1>
+                        <Link to="/projects" className="view-all-btn">View All Projects</Link>
+                    </div>
+                    <div className="new-projects-grid">
+                        {projects.slice(0, 2).map((ele, index) => (
+                            <div key={index} className="new-project-card" data-aos="fade-up" data-aos-delay={100 * (index + 1)}>
+                                <div className="new-project-content">
+                                    <h2 className="new-project-title">{ele.projectTitle}</h2>
+                                    {ele.role && <p className="new-project-role">{ele.role}</p>}
+                                    <p className="new-project-desc">{ele.projectDesc}</p>
+                                    <div className="new-project-tech">
+                                        {ele.techStack.split(',').map((tech, i) => (
+                                            <span key={i} className="tech-pill">{tech.trim()}</span>
+                                        ))}
+                                    </div>
+                                    <div className="new-project-links">
+                                        {ele.website && <a href={ele.website} target="_blank" rel="noreferrer" className="plink">Live Demo</a>}
+                                        {ele.github_link && <a href={ele.github_link} target="_blank" rel="noreferrer" className="plink">GitHub</a>}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                </div>
+            </div>
+
+            {/* Certifications Overview */}
+            <div className="home-section" style={{ backgroundColor: '#1d1d25', padding: '100px 20px' }}>
+                <div className="cert-container">
+                    <div className="section-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '50px' }}>
+                        <h1 style={{ margin: 0, fontSize: '36px', textAlign: 'left' }}>Latest Certifications</h1>
+                        <Link to="/certifications" className="view-all-btn">View All Certificates</Link>
+                    </div>
+                    <div className="cert-grid">
+                        {certificates.slice(-3).reverse().map((cert, index) => (
+                            <a
+                                key={index}
+                                href={cert.CertiLink}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="cert-card"
+                                data-aos="fade-up"
+                                data-aos-delay={80 * (index + 1)}
+                            >
+                                <div className="cert-image-wrap">
+                                    <img src={cert.CertiImage} alt={cert.CertiName} />
+                                    <div className="cert-overlay">
+                                        <span>View Certificate</span>
+                                    </div>
+                                </div>
+                                <div className="cert-details">
+                                    <span className="cert-company">{cert.CertiCompany}</span>
+                                    <h3 className="cert-name">{cert.CertiName}</h3>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <div className="achievements" style={{ backgroundColor: '#292930', padding: '100px 20px', marginBottom: 0 }}>
+                <h1 style={{ textAlign: 'center', margin: '0 0 50px 0', fontSize: '36px' }}>Achievements</h1>
+
                 <div className="cards-wrap">
                     <div className="prev-button" onClick={prevscrollFun}>
                         <i className="fas fa-arrow-left"></i>
@@ -382,7 +463,7 @@ const Home = () => {
                         {chunkedAchievements.map((group, groupIdx) => (
                             <div key={groupIdx} className="achieve_cards">
                                 {group.map((ele, index) => (
-                                    <div key={index} className="achieve_card">
+                                    <div key={index} className="achieve_card" style={{ height: '380px' }}>
                                         <div className="achieve_icon-div">
                                             <div className="achieve_icon" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                                 <a href={ele.link}>
@@ -405,6 +486,58 @@ const Home = () => {
                         <i className="fas fa-arrow-right"></i>
                     </div>
                 </div>
+            </div>
+
+            {/* Experience Section */}
+            <div id="experience" style={{ background: '#1d1d25', padding: '100px 0' }}>
+                <div className="experience-section">
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '15px', marginBottom: '40px' }}>
+                        <h1 data-aos="fade-down" style={{ textAlign: 'center', margin: 0, color: '#fff', fontSize: '36px' }}>Experience & Education</h1>
+                        <div style={{ display: 'flex', gap: '20px' }}>
+                            <div className="prev-button" onClick={prevTimeline} style={{ position: 'relative', top: '0', transform: 'none', left: '0', right: '0' }}>
+                                <i className="fas fa-arrow-left"></i>
+                            </div>
+                            <div className="next-button" onClick={nextTimeline} style={{ position: 'relative', top: '0', transform: 'none', left: '0', right: '0' }}>
+                                <i className="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="h-timeline" data-aos="fade-up" ref={timelineRef} style={{ scrollBehavior: 'smooth' }}>
+                        <div className="h-timeline-items">
+                            {experiences.map((exp, index) => (
+                                <div key={index} className="h-timeline-item">
+                                    <div className="h-timeline-dot"></div>
+                                    <div className="h-timeline-card">
+                                        <div className="timeline-header">
+                                            <h3>{exp.title}</h3>
+                                            {exp.subtitle && <h4>{exp.subtitle}</h4>}
+                                        </div>
+                                        {exp.items.length > 0 && (
+                                            <div className="timeline-tags">
+                                                {exp.items.map((item, i) => (
+                                                    <span key={i} className="timeline-tag">{item}</span>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Contact Call to Action */}
+            <div className="home-section" style={{ backgroundColor: '#292930', padding: '100px 20px', textAlign: 'center' }}>
+                <h1 style={{ fontSize: '46px', color: '#fff', marginBottom: '20px' }} data-aos="fade-up">Ready to start a project?</h1>
+                <p style={{ color: '#999', fontSize: '18px', maxWidth: '600px', margin: '0 auto 40px', lineHeight: "1.6" }} data-aos="fade-up" data-aos-delay="200">
+                    I'm currently available for freelance work and full-time opportunities.
+                    Let's build something amazing together!
+                </p>
+                <Link to="/contact" className="view-all-btn" style={{ padding: '15px 40px', fontSize: '18px' }} data-aos="fade-up" data-aos-delay="400">
+                    Get In Touch
+                </Link>
             </div>
         </div>
     );
