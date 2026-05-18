@@ -28,7 +28,7 @@ const Certifications = () => {
     const filteredCertificates = certificates.filter(cert => cert.category === activeCategory);
 
     return (
-        <div style={{ backgroundColor: '#1d1d25', minHeight: '100vh', padding: '80px 20px' }}>
+        <div style={{ backgroundColor: '#1d1d25', minHeight: '100vh', padding: '120px 20px' }}>
             <div className="cert-container">
                 <div className="cert-header" data-aos="fade-down">
                     <h1>Certifications</h1>

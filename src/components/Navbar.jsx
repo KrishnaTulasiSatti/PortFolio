@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import '../styles/home.css';
+import '../styles/navbar.css';
 
 const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -16,45 +16,51 @@ const Navbar = () => {
 
     const handleNavLinkClick = (path) => {
         if (location.pathname === path) {
-            window.scrollTo({ top: 0, behavior: 'auto' });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         closeSidebar();
     };
 
     const navLinks = [
         { name: 'Home', path: '/' },
-        { name: 'Experience', path: '/#experience' },
+        { name: 'Projects', path: '/projects' },
+        { name: 'Experience', path: '/experience' },
+        { name: 'Certifications', path: '/certifications' },
+        { name: 'Contact', path: '/contact' }
     ];
 
     const isActive = (path) => {
-        if (path.startsWith('/#')) {
-            return location.pathname === '/' && location.hash === path.substring(1);
-        }
         return location.pathname === path;
     };
 
     return (
         <div className="nav-bar">
-            <div className="name">
-                Krishna Tulasi <span>Satti</span>
-            </div>
-
-
+            <Link to="/" className="logo-link" onClick={() => handleNavLinkClick('/')}>
+                <div className="name">
+                    Krishna Tulasi <span>Satti</span>
+                </div>
+            </Link>
 
             <div className="nav-links">
                 {navLinks.map((link) => (
-                    link.path.startsWith('http') ? (
-                        <a key={link.name} href={link.path} target="_blank" rel="noopener noreferrer">{link.name}</a>
-                    ) : link.path.startsWith('/#') ? (
-                        <a key={link.name} href={link.path} style={isActive(link.path) ? { color: '#e7721e' } : {}}>{link.name}</a>
-                    ) : (
-                        <Link key={link.name} to={link.path} style={isActive(link.path) ? { color: '#e7721e' } : {}} onClick={() => handleNavLinkClick(link.path)}>
-                            {link.name}
-                        </Link>
-                    )
+                    <Link
+                        key={link.name}
+                        to={link.path}
+                        className={isActive(link.path) ? 'active' : ''}
+                        onClick={() => handleNavLinkClick(link.path)}
+                    >
+                        {link.name}
+                    </Link>
                 ))}
-                <a href="https://drive.google.com/file/d/1ULL08m1OttJiSJmwV9DPx3X3xgV8its_/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
-                </div>
+                <a
+                    href="https://drive.google.com/file/d/1ULL08m1OttJiSJmwV9DPx3X3xgV8its_/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="resume-btn"
+                >
+                    Resume
+                </a>
+            </div>
 
             <div className="menu-icon" onClick={openSidebar}>
                 <i className="fas fa-bars fa-2x"></i>
@@ -64,14 +70,25 @@ const Navbar = () => {
                 <span className="close-icon" onClick={closeSidebar}>&#10005;</span>
 
                 {navLinks.map((link) => (
-                    link.path.startsWith('http') ? (
-                        <a key={link.name} href={link.path} target="_blank" rel="noopener noreferrer" onClick={closeSidebar}>{link.name}</a>
-                    ) : (
-                        <Link key={link.name} to={link.path} style={isActive(link.path) ? { color: '#e7721e' } : {}} onClick={() => handleNavLinkClick(link.path)}>
-                            {link.name}
-                        </Link>
-                    )
+                    <Link
+                        key={link.name}
+                        to={link.path}
+                        className={isActive(link.path) ? 'active' : ''}
+                        onClick={() => handleNavLinkClick(link.path)}
+                    >
+                        {link.name}
+                    </Link>
                 ))}
+                
+                <a
+                    href="https://drive.google.com/file/d/1ULL08m1OttJiSJmwV9DPx3X3xgV8its_/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="resume-btn-mobile"
+                    onClick={closeSidebar}
+                >
+                    Resume
+                </a>
             </div>
         </div>
     );

@@ -18,7 +18,7 @@ const Projects = () => {
     }, []);
 
     return (
-        <div style={{ backgroundColor: '#1d1d25', minHeight: '100vh', padding: '80px 20px 20px 20px', fontFamily: '"Josefin Sans", sans-serif' }}>
+        <div style={{ backgroundColor: '#1d1d25', minHeight: '100vh', padding: '120px 20px 20px 20px', fontFamily: '"Josefin Sans", sans-serif' }}>
             <div className="new-projects-container">
                 <div className="new-projects-header" data-aos="fade-down">
                     <h1>Projects</h1>

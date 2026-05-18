@@ -44,7 +44,7 @@ const Experience = () => {
     ];
 
     return (
-        <div style={{ backgroundColor: '#1d1d25', minHeight: 'calc(100vh - 200px)', paddingBottom: '20px', paddingTop: '20px' }}>
+        <div style={{ backgroundColor: '#1d1d25', minHeight: 'calc(100vh - 200px)', paddingBottom: '20px', paddingTop: '100px' }}>
             <div className="experience-section">
                 <h1 data-aos="fade-down">Experience & Education</h1>
                 <p className="experience-subtitle" data-aos="fade-up">A timeline of my academic journey, coding clubs, and the skills I've picked up along the way.</p>

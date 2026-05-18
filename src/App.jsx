@@ -15,7 +15,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="app-container">
-        {/* <Navbar /> */}
+        <Navbar />
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,7 +26,7 @@ function App() {
           {/* Add a fallback for legacy cert.html and other paths if needed */}
           <Route path="/cert.html" element={<Certifications />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
         <Analytics />
       </div>
     </Router>

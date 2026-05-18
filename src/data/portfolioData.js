@@ -1,32 +1,22 @@
 export const projects = [
     {
-        "projectImage": "/Assets/healthhub.png",
-        "website": "https://healthhub-ai.vercel.app/",
-        "projectTitle": "Health Hub",
-        "role": "Frontend & Backend Developer",
-        "projectDesc": "A full-stack MERN healthcare platform integrating LLMs for an AI-powered symptom checker and condition-based diet planning. Includes secure JWT authentication, a premium diagnostic UI, and dynamic hospital listings.",
-        "techStack": "MongoDB, Express, React, React Router, Node.js, AI/LLMs, Mongoose, JWT",
-        "github_link": "https://github.com/KrishnaTulasiSatti/HealthHub"
+        "projectImage": "/Assets/cogniverse.png",
+        "website": "https://www.cogniverse.live",
+        "projectTitle": "CogniVerse",
+        "role": "Full-Stack & Mobile Developer",
+        "projectDesc": "An advanced AI-powered educational ecosystem that automatically processes lecture recordings and PDFs into interactive student workspaces. Features smart chaptered audio streaming, dynamic flashcard decks, auto-graded practice quizzes, downloadable study booklets, and a custom RAG-based AI tutor strictly anchored to lecture context to prevent hallucinations. Includes a real-time feedback analytics dashboard for mentors.",
+        "techStack": "MongoDB, Express, React, React Native, Node.js, Google Gemini, Grok API, Expo SDK 54, Expo AV, JWT, Framer Motion",
+        "github_link": "https://github.com/KrishnaTulasiSatti/CogniVerse"
     },
     {
         "projectImage": "/Assets/healthhub.png",
         "website": "https://healthhub-ai.vercel.app/",
         "projectTitle": "Health Hub",
         "role": "Frontend & Backend Developer",
-        "projectDesc": "A full-stack MERN healthcare platform integrating LLMs for an AI-powered symptom checker and condition-based diet planning. Includes secure JWT authentication, a premium diagnostic UI, and dynamic hospital listings.",
-        "techStack": "MongoDB, Express, React, React Router, Node.js, AI/LLMs, Mongoose, JWT",
-        "github_link": "https://github.com/KrishnaTulasiSatti/HealthHub"
-    },
-    {
-        "projectImage": "/Assets/healthhub.png",
-        "website": "https://healthhub-ai.vercel.app/",
-        "projectTitle": "Health Hub",
-        "role": "Frontend & Backend Developer",
-        "projectDesc": "A full-stack MERN healthcare platform integrating LLMs for an AI-powered symptom checker and condition-based diet planning. Includes secure JWT authentication, a premium diagnostic UI, and dynamic hospital listings.",
-        "techStack": "MongoDB, Express, React, React Router, Node.js, AI/LLMs, Mongoose, JWT",
+        "projectDesc": "A full-stack MERN healthcare platform integrating advanced LLMs for an AI-powered symptom checker and personalized, condition-based diet planning. Features robust JWT authentication, an interactive diagnostic UI dashboard, dynamic nearby hospital listings with maps, and optimized medical appointments. Built with reliable schema architecture to deliver an empathetic and seamless healthcare workspace.",
+        "techStack": "MongoDB, Express, React, React Router, Node.js, OpenAI API, Mongoose, JWT, Tailwind CSS, Axios",
         "github_link": "https://github.com/KrishnaTulasiSatti/HealthHub"
     }
-
 ];
 
 export const certificates = [
